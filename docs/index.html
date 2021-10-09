@@ -12,13 +12,28 @@
     <h1 class="page-title">
       Conversor de moedas
     </h1>
-    <p class="page-subtitle">
+    <p id="page-subtitle" class="page-subtitle">
       Descubra os valores em real R$
     </p>
     <img src="./img/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt=""><br><br>
-    <label for="moeda">Insira o valor em dolar</label><br>
+    
+    <div class="tipo-conv">
+        <div>
+          <input type="radio" name="dolar-real""/>
+          <label for="dolar-real">Dolar para Real</label>
+        </div>
+        <div>
+          <input type="radio" name="dolar-real" checked="checked"/>
+          <label for="dolar-real">Real real Dolar</label><br>
+        </div>
+        <div>
+          <button type="submit" onclick="tipo_convercao()">Submit</button>
+        </div> 
+      </div>
+    
+    <label id="moeda">Insira o valor em dolar</label><br>
     <input type="number" id="valor" size="2" value=100 /><br>
-    <button type="submit" onclick="Converter()">Converter</button>
+    <button type="submit" onclick="converter()">Converter</button>
     <h2 id="valorConvertido"></h2>
   </div>
   
